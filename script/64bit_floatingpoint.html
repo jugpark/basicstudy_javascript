@@ -6,7 +6,13 @@
 <body>
     <script>
         let x = 0.1 + 0.2;
-        console.log(x); // = 0.3
+        console.log(x); // = 0.3     0.3000000000000004
+        //javascript saved ad 64bit floadtingpoint -> can occur problem while using for save real info
+        console.log((0.1).toString(2));
+        //0.000110011001100.....
+        //1bit - positive = 0, negative = 1
+        //11bit - 2^(10) -1 + m              2^(10) = 1024
+
     </script>
 </body>
 </html>

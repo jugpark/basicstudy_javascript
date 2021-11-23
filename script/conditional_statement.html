@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //if, switch
+        var age = 24;
+        //if    => statement
+        if (age > 20) {
+            console.log("you are an adult");
+        } else if (age >= 18 && age <= 20) {          //other statement
+            console.log("just a little bit time left");
+        } else {      //all other left statement
+            console.log("you are not an adult");
+        }
+
+        var d = new Date();
+        var day = d.getDay();
+        //getDay =  built_in_function   => get day like monday = 1
+        console.log(day);
+        var dayName = "";
+
+        switch (day) {
+            case 0:  //if d.getday result is 0, if means it`s sunday today and save this in to var day
+                     //and then switch dayName to "Sunday"
+                dayName = "Sunday";
+                break;
+            case 6:
+                dayName = "Saturday";
+                break;
+            case 5:
+                dayName = "Friday";
+                break;
+
+            default:
+                dayName = "";
+                break;
+        }
+        console.log(dayName);
+
+    </script>
+</body>
+
+</html>

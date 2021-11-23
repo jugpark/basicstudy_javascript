@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //loop  => while statement is still working, execute code
+        for(var i =0; i <5 ; i++){
+            if(i ==3){
+                break; // if i = 3, function will stop
+            }
+            console.log("The number is" + i);
+        }
+        //in for function, can also use variable outside of the function
+        var total = 0;
+        var i = 1;
+        for(;i <= 10;){
+            total += i;
+            i++;
+        }
+
+        var numbers = [1, 2, 3, 4];
+        var len = numbers.length;
+        //while i is increasing untill it`s size match as length, can count and figure out what indexs are in the array
+        for(var i = 0; i < len; i++){
+            console.log(numbers[i]);
+        }
+        //for-in    => bring index number in array
+        for(var i in numbers) {
+            console.log(i);
+        }
+        //for-of    => bring value of index in array
+        for(var num of numbers){
+            console.log(num);
+        }
+        //while => check condition first
+        var i = 1;
+        var total = 0;
+        while(i <= 10){
+            total += total
+            i++;
+        }
+        //do-while  => first statement will excute and then check condition
+        var i = 1;
+        var total = 0;
+        do {
+            total += total;
+            i++;
+        }
+        while(i <= 10);
+
+
+
+    </script>
+</body>
+</html>
