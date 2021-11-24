@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" />
+    <button type="button">save</button>
+    <script>
+        //alert
+        // alert("this is alert window");
+        // var yn = confirm("would you delete for real?");
+        // console.log(yn);
+        // ==
+
+        if (confirm("would you delete for real?")) {
+            confirm => conditional
+            //execute delete
+            console.log("delete");
+        }
+
+        var txt = prompt("input password"); prompt => conditional
+        console.log(txt);
+        if (txt == null) {
+        } else if (txt == "") {
+        } else if (txt != "") {
+            console.log(txt);
+        }
+
+        window.open("https://google.com"); //   => open input window
+
+        window.print(); //  => open print window
+
+        //setTimeout    => run function only once
+
+        setTimeout(function () {
+            console.log("run 5sec after");
+        }, 5000);
+
+        //setInterval   => run function repititve
+        var i = 0;
+        var fnc = setInterval(function () {
+            console.log("run 3sec after" + i);
+            if (i == 3) {
+                clearInterval(fnc); // => clearInterval = stop function
+                i++;
+            }
+        }, 3000);
+
+
+
+    </script>
+</body>
+
+</html>

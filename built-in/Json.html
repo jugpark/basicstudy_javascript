@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //JSON
+        //use JSON for transmit data from server to webpage
+        //use at opposite situation too by using json formet
+        //json - Javascript Object Notation
+
+        var data = {
+            "employees": [
+                { "firstname": "J", "lastName": "j" },
+                { "firstname": "A", "lastName": "a" },
+                { "firstname": "B", "lastName": "b" }
+            ]
+        }
+        var text = '{ "employees" : [' +
+            '{ "firstName": "J", "lastName":"j" },' +
+            '{ "firstName": "J", "lastName":"j" },' +
+            '{ "firstName": "J", "lastName":"j" } ]} ';
+        //JSON.stringify    => object to string
+        console.log(data);  // object
+        console.log(JSON.stringify(data));  // string   but object formet
+
+        //JSON.parse    => string to object
+        var obj = JSON.parse(text);
+        console.log(obj);    // object
+    </script>
+</body>
+
+</html>

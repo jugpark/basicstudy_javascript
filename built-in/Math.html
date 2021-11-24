@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //round => rounds, round down
+        console.log(Math.round(4.9));   // => 5
+        console.log(Math.round(4.4));   // => 4
+
+        //ceil  => unconditional rounds
+        console.log(Math.ceil(4.2));   // => 5
+
+        //floor => unconditional round down
+        console.log(Math.floor(4.9));   // => 4
+        console.log(Math.floor(-4.9));   // => -5
+
+        //trunc => return integer part
+        console.log(Math.floor(9.9));   // => 9
+        console.log(Math.floor(-4.9));   // => -4
+
+        //sign  => inform number is possitive =1 or negative =-1 or 0=0
+        console.log(Math.sign(-7)); //  => -1
+        console.log(Math.sign(7)); //  => 1
+        console.log(Math.sign(0)); //  =>  0
+
+        //pow   = square
+        console.log(Math.pow(8,2)); //  => 64
+
+        //sqrt  = square root
+        console.log(Math.sqrt(64)); //  => 8
+    
+        //abs   = turn in to possitive
+        console.log(Math.abs(-4.7)); // => 4.7
+
+        //max & min
+        console.log(Math.max(0,150,23,45,-28,77)); //   => 150
+        console.log(Math.min(0,150,23,45,-28,77)); //   => -28
+
+        //random
+        var x = Math.random();  // number between 0 ~ 1 
+
+        //1 ~ 10 random num
+        var x = Math.floor((Math.random() * 10) + 1) // 1 ~ 10
+
+        //1 ~ 100 random num
+        var x = Math.floor((Math.random() * 100) + 1) // 1 ~ 100
+
+
+    </script>
+</body>
+</html>
