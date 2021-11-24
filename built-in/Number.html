@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = 123;
+        //toString()    => convert number to string as designated num
+        console.log(x.toString());
+
+        //toFixed   => rounds as designated
+        var x = 123.33337;
+        console.log(x.toFixed(3));
+        
+        //toPrecision   => rounds as designated but comprise integer part
+        var x = 9.565;
+        console.log(x.toPrecision(2));
+
+        var x = Number("10"); // => integer 10
+        var x = Number(true); // => 1
+        var x = Number(false); // => 0
+        console.log(Number("  10   ")); // => 10
+        console.log(Number(10,33)); // => NaN (not a number)
+        
+        //parseInt()    => only return integer part
+        console.log(parseInt("3"));
+        console.log(parseInt("3  3"));  // => 3
+        console.log(parseInt("3 years")); // => 3
+
+        //parseFloat()   => return float too
+        console.log(praseFloat("3.14"));    // => 3.14   
+
+    </script>
+</body>
+</html>

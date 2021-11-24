@@ -9,8 +9,57 @@
         //.length   => length of string
         console.log(txt.length);
         //indexOf   => check index that match with submiited and return starting index num of it
+        //if nothing matched, return -1
         var str = "Please locate where 'locate' is";
         console.log(str.indexOf("locate"));
+        if(str.indexOf("John") > -1) {
+            console.log("locate detected")
+        }
+        
+        //lastIndexOf
+        console.log(str.lastIndexOf("locate"));
+        
+        //search
+        console.log(str.search("loacte"));
+        
+        //slice,substring,substr => pilfer index
+        var str2 = "Applem, Banana, Kiwi";
+        console.log(str2.slice(7,13));
+        console.log(str2.substring(7,13));
+        console.log(str2.substr(7,6));
+        
+        //replace   => replace index to index
+        var str3 = "Please visit here here here";
+        var str4 = str.replace(/here/g, "there"); // g  => global
+        console.log(str4);
+        
+        //toupperCase, tolowerCase  => change case
+        
+        //concat    => comnbine string
+        var txt1 = "Hello";
+        var txt2 = "World";
+        var txr3 = txt1.concat(" ",txt2);
+        
+        //trim  => trimming the blank 
+        var str5 = "          Hello World     ";
+        console.log(str5.trim());
+        
+        //padStart  => make a padding at start of the word
+        var str6 = "5";
+        console.log(str6.padStart(4,0));
+
+        //padEnd    => make a padding at end of the word
+        console.log(str6.padEnd(4,0));
+
+        //charAt    =>  bring the value of what ordered for bring
+        var str7 = "Hello world";
+        console.log(str7.charAt(0))
+
+        //split
+        var tags = "keyboard, mechanic, bluetooth";
+        var arr = tags.split(",");
+        console.log(arr);
+
     </script>
 </body>
 </html>

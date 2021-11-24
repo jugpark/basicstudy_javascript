@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <script>
+        //toString()    => combine as one string
+        var fruits = ["Banana, Apple, Orange"];
+        console.log(fruits.toString());
+
+        //join()    => divide by given element
+        console.log(fruits.join(" * "));
+        var txt = "Banana<br>";
+        txt += "Orange<br>";
+        txt += "Apple<br>";
+
+        var arr = [];   // => use push to push element in to last of the array
+        arr.push("Banana<br>");
+        arr.push("Oragne<br>");
+        arr.push("Apple<br>");
+
+        // document.getElementById("div1").innerHTML = txt;
+        document.getElementById("div1").innerHTML = arr.join("");
+
+        //pop  => delete the last element in the array
+        //pop() , return deleted element
+        var str = fruits.pop();
+        console.log(str);  //  =>  Apple
+        console.log(fruits);   //  =>  Banana, Orange
+
+        //shift  => delete first element in the array
+        //shift(), return deleted element
+        var str = fruits.shift();
+
+        //unshift  => add element at the first of the array
+        fruits.unshift("Lemon");
+        fruits[0] = "Banana";  //shift Lemon to Banana
+
+        //splice   => first parameter = starting point
+        //         => second parameter = number of elements to delete
+        //         => 
+        var fruits2 = ["Banana, Apple, Orange"];
+        fruits2.splice(1, 0, "Lemon", "Kiwi");    // => Banana Lemon Kiwi Apple Orange
+
+        //concat   => combine 
+        var mycat = ["winter"];
+        var mydogs = ["DDang", "bok"];
+        var mypets = mycat.concat(mydogs);
+
+        //slice    => take out the elements that what really wants
+        var fruits3 = fruits.slice(1, 2);
+        console.log(fruits3);  // => start at element1 and end at 2
+
+        //sort => sort array elements
+        var points = [40, 100, 70, 21, 99];
+        // console.log(points.sort());  => 100, 21, 40, 70, 99    sort by first index of element
+        points.sort(function (a, b) {
+            // if(a > b) {
+            //     return 1;
+            // }else if(a < b) {
+            //     return -1
+            // }else {
+            //     return 0;
+            // }
+            return a - b; // same
+        });
+        console.log(points);    // => 21,40,70,99,100
+
+        var persons = [
+            { name: "j", point: 78 },
+            { name: "k", point: 90 },
+            { name: "p", point: 72 },
+            { name: "o", point: 85 }
+        ];
+
+        persons.sort(function (a, b) {
+            return a.point > b.point ? 1 : a.point < b.point ? -1 : 0;  // => same
+        });
+        //     if (a.point > b.point) {
+        //         return -1
+        //     } else if (a.point < b.point) {
+        //         return 1;
+        //     } else {
+        //         return 0;
+        //     }
+        // });
+        console.log(persons);   // => sorted by points
+
+        //reverse   => reverse array elements
+
+        //filter    => make a filter to filttering elements
+        var pass = persons.filter(function (person) {
+            return person.point > 80;
+        })
+        console.log(pass); // => k o
+
+        //reduce  parameters  =>  accumulator - 누산기           ex a
+        //                    =>  currentValue -  현재값         ex b
+        //                    =>  currentIndex
+        //                    =>  wholeIndex
+        var arr1 = [1, 2, 3, 4];
+        // var total = 0;
+        // for(var x of arr1) {
+        //     total += x;
+        // };
+        var total = arr1.reduce(function (a, c) {
+            return a + c;
+        })
+
+        //map   => make new array
+        var userList = [
+            { firstname: "J", lastName: "j", email: "Jj@gmail.com" },
+            { firstname: "A", lastName: "a", email: "Aa@gmail.com" },
+            { firstname: "B", lastName: "b", email: "Bb@gmail.com" },
+            { firstname: "C", lastName: "c", email: "Cc@gmail.com" }
+        ];
+
+        var userList2 = userList.map(function (user) {
+            return { fullName: user.lastName + " " + user.firstName, firstname: user.firstName, lastName: lastName, email: user.email };
+        });
+    </script>
+</body>
+
+</html>
