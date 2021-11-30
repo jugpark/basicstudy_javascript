@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //scope => accessibility of variable
+
+        //local scope
+        function myFunction(){
+            var carName = "Hyundai";
+            console.log(carName);
+        }
+        myFunction();   // => reply Hyundai
+        console.log(carName)    // => ReferenceError
+
+        var carName2 = "Kia";
+
+        function myFunction2(){
+            console.log(carName2);
+        }
+        myFunction2();  // => reply Kia
+
+        var myFunction3 = function() {
+        }
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Class
+        //frame to make a class object
+
+        class Car {
+            constructor(modelName, modelYear, type, price) {   
+                this.modelName = modelName;
+                this.modelYear = modelYear
+                this.type = type;
+                this.price = price;
+            }
+
+            getModelName() {
+                return this.modelName;
+            }
+            getModelYear() {
+                return this.modelYear;
+            }
+            getPrice() {
+                return this.price;  // => save information transmitted by setPrice()
+            }
+            setPrice(price) {
+                this.price = price; // => input to the getPricae()
+            }
+        }
+
+        //mass-produce objects from Key frame of object(class)
+        let car = new Car("Benz", "2021", "e", 5000);
+        car.setPrice(4500);
+
+        console.log(car.getModelName());
+        console.log(car.getModelYear());
+        console.log(car.getPrice());
+
+        car.setPrice(4100);
+        console.log(car.getPrice());
+
+        class ElectronicCar extends Car {
+            constructor(modelName, modelYear, price) {
+                super(modelName, modelYear, "e", price);    // inheritance from car Class
+            }
+        }
+        let elecCar1 = new ElectronicCar("Ionic", "2021", 5000);
+        console.log(elecCar1.getModelName());
+    </script>
+</body>
+</html>

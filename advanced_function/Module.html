@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script src="/advanced_function/Module.js" type="module"></script> -->
+    <!-- so heavy while using only a few functions in the module(if we have 100 functions in module) -->
+    <script type="module">
+        import {log, error, PI} from "/advanced_function/Module.js";
+        log("log message");
+        error("error message");
+        log(PI);
+    </script>
+    <script src="/advanced_function/ref.js" type="module"></script>
+    <script>
+        // log("log message");
+        // error("error message");
+    </script>
+</body>
+</html>
